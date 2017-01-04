@@ -1,0 +1,33 @@
+<h1><%= @tag_page_title %>
+
+<h2><% @tags.each do |tag| %><h2>
+
+  <h4><%= tag.name %><h4>
+  <div class="container">
+<div class="row">
+    <div class="col-xs-4">
+        <img src="http://placehold.it/350x250" id="picture1" class="img-responsive" />
+    </div>
+    <div class="col-xs-4">
+        <img src="http://placehold.it/350x250" id="picture2" class="img-responsive" />
+    </div>
+    <div class="col-xs-4">
+        <a href="/"><img src="http://placehold.it/350x250" id="picture3" class="img-responsive" /></a>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-*-*"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+</div>
+<div class="row">
+  ...
+</div>
+
+<% end %>
