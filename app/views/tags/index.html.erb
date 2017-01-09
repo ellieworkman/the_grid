@@ -1,8 +1,8 @@
 <h1><%= @page_title %>
 
-<h2><% @categories.each do |category| %><h2>
+<h2><% @tags.each do |tag| %><h2>
 
-  <h4><a href="/tags?category_id=<%= category.id %>"> <%= category.name %></a></h4>
+  <h4><a href="/blogs?tag_id=<%= tag.id %>"><%= tag.name %></a></h4>
   <div class="container">
 <div class="row">
     <div class="col-xs-4">
@@ -15,7 +15,7 @@
         <img src="http://placehold.it/350x250" id="picture3" class="img-responsive" />
     </div>
 </div>
-  <img src="<%= category.image_url %>" alt= category.name style="width:200px;height:200px;">
+  <img src="<%= tag.image_url %>" alt= tag.name style="width:200px;height:200px;">
 
 <div class="row">
   <div class="col-*-*"></div>
@@ -31,4 +31,4 @@
   ...
 </div>
 
-<% end %>
+<% end %> 

@@ -1,4 +1,4 @@
 class BlogsTag < ApplicationRecord
-  belongs_to :blogs 
-  belongs_to :tags 
+  belongs_to :blog 
+  belongs_to :tag
 end
