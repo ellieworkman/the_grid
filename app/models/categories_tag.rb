@@ -1,4 +1,4 @@
 class CategoriesTag < ApplicationRecord
-  belongs_to :categories
-  belongs_to :tags
+  belongs_to :category
+  belongs_to :tag
 end
