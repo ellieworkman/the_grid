@@ -1,5 +1,10 @@
 class CategoriesController < ApplicationController
 
+  def home
+    #if not logged in, force them to go "/"
+    #public and private renders
+  end 
+
   def index
     @categories = Category.all 
     @page_title = "Welcome to the Grid. What are you in the mood for?"
