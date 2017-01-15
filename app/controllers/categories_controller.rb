@@ -14,12 +14,13 @@ class CategoriesController < ApplicationController
   end 
 
   def show
-    # @tags = Tag.all
-    # @tag_page_title = "Welcome to your specific Category. What are you in the mood for? Choose as many or little as you prefer."
+    @tags = Tag.all
+    @tag_page_title = "Welcome to your specific Category. What are you in the mood for? Choose as many or little as you prefer."
 
-    # if params[:category]
-    #   category = Category.find_by(name: params[:category])
-    #   @tags = category.tags 
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @tags = category.tags 
+    end
   end 
 
 end
