@@ -13,8 +13,8 @@
           <div class="row">
             <div class="col-md-8 col-sm-9 center-block text-center">
               <header>
-                <h1>3 Columns grid portfolio</h1>
-                <p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes.</p>
+                <h1> What type of category name are you interested in? </h1>
+                <p>Choose as many as you like</p>
               </header>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -24,27 +24,21 @@
           <div class="row">
             <div class="col-sm-12 portfolio">
               
-              <ul class="filter text-center">
-                <li><a href="#" data-filter="*" class="active">All</a></li>
-                <li><a href="#" data-filter=".identity">Identity</a></li>
-                <li><a href="#" data-filter=".interactive">Interactive</a></li>
-                <li><a href="#" data-filter=".print">Print</a></li>
-                <li><a href="#" data-filter=".photography">Photography</a></li>
-              </ul><!-- /.filter -->
+            
               
               <ul class="isotope items col-3">
                 <!-- Repeat This Element for each tag -->
-                <%= @tags.each do |tag| %>
+                <% @tags.each do |tag| %>
                 <li class="item thumb interactive">
-                  <a href="portfolio-post.html">
+                  <a href="/tags">
                     <figure>
                       <figcaption class="text-overlay">
                         <div class="info">
-                          <h4><% tag.name %></h4>
+                          <h4><%= tag.name %></h4>
                           <p>Interactive</p>
                         </div><!-- /.info -->
                       </figcaption>
-                      <img src="/assets/images/art/work01.jpg" alt="">
+                      <img src="/public_assets/images/art/work01.jpg" alt="">
                     </figure>
                   </a>
                 </li><!-- /.item -->

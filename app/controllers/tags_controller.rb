@@ -12,12 +12,12 @@ class TagsController < ApplicationController
   end
 
   def show 
-    @tags = Tag.all
-    @tag_page_title = "Welcome to your specific Category. What are you in the mood for? Choose as many or little as you prefer."
+    # @tags = Tag.all
+    # @tag_page_title = "Welcome to your specific Category. What are you in the mood for? Choose as many or little as you prefer."
 
-    if params[:tag]
-      blog = Blog.find_by(name: params[:tag])
-      @blogs = tags.blogs
-    end
+    # if params[:tag]
+    #   blog = Blog.find_by(name: params[:tag])
+    #   @blogs = tags.blogs
+    # end
   end  
 end
