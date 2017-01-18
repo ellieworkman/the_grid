@@ -1,8 +1,11 @@
 class CategoriesController < ApplicationController
 
   def home
-    #if not logged in, force them to go "/"
-    #public and private renders
+    if current_user
+      render :home
+    else 
+      render :landing
+    end
   end 
 
   def index
@@ -10,8 +13,6 @@ class CategoriesController < ApplicationController
     
   end
 
-  def home
-  end 
 
   def show
     # @category = Category.find_by
