@@ -32,21 +32,27 @@
               
               <ul class="isotope items col-3">
                 <% @blogs.each do |blog| %>
-                <li class="item thumb interactive">
-                  <a href="<%= blog.url %>">
-                    <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h4><%= blog.title %></h4>
-                          <p><%= blog.description %></p>
+                  <li class="item thumb interactive">
+                    <a href="<%= blog.url %>">
+                      <figure>
+                        <figcaption class="text-overlay">
+                          <div class="info">
+                            <h4><%= blog.title %></h4>
+                            <p><%= blog.description %></p>
+                            
+                            <%= link_to "Favorite", "/favorites?blog_id=#{blog.id}", method: :post %>
+                            
+
+
+                              
+                          
+                          </div><!-- /.info -->
+                        </figcaption>
                         
-                        </div><!-- /.info -->
-                      </figcaption>
-                      
-                      <img src="<%= blog.image_url %>" alt="">
-                    </figure>
-                  </a>
-                </li><!-- /.item -->
+                        <img src="<%= blog.image_url %>" alt="">
+                      </figure>
+                    </a>
+                  </li><!-- /.item -->
                 <% end %>
                 
               </ul><!-- /.items -->

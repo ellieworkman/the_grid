@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get "/", to: "categories#index"
 
+  post "/favorites", to: "favorites#create"
+  get "/favorites", to: "favorites#index"
+
 #     Prefix Verb   URI Pattern                    Controller#Action
 #         blogs GET    /blogs(.:format)               blogs#index
 #               POST   /blogs(.:format)               blogs#create

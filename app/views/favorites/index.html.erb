@@ -1,0 +1,54 @@
+
+
+<section id="portfolio">
+        
+        <div class="container inner">
+          <div class="row">
+            <div class="col-md-8 col-sm-9 center-block text-center">
+              <header>
+                <h1>3 Columns grid portfolio</h1>
+                <p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes.</p>
+              </header>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+        
+        <div class="container inner-bottom">
+          <div class="row">
+            <div class="col-sm-12 portfolio">
+              
+              <ul class="filter text-center">
+                <li><a href="#" data-filter="*" class="active">All</a></li>
+                <li><a href="#" data-filter=".identity">Identity</a></li>
+                <li><a href="#" data-filter=".interactive">Interactive</a></li>
+                <li><a href="#" data-filter=".print">Print</a></li>
+                <li><a href="#" data-filter=".photography">Photography</a></li>
+              </ul><!-- /.filter -->
+              
+              <ul class="isotope items col-3">
+                <% @favorites.each do |favorite| %>
+                  <li class="item thumb interactive">
+                    <a href="<%= favorite.blog.url %>">
+                      <figure>
+                        <figcaption class="text-overlay">
+                          <div class="info">
+                            <h4><%= favorite.blog.title %></h4>
+                            <p><%= favorite.blog.description %></p>
+                                
+                          
+                          </div><!-- /.info -->
+                        </figcaption>
+                        
+                        <img src="<%= favorite.blog.image_url %>" alt="">
+                      </figure>
+                    </a>
+                  </li><!-- /.item -->
+                <% end %>
+                
+              </ul><!-- /.items -->
+              
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+
