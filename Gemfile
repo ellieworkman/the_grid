@@ -31,6 +31,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem 'faker'
+gem 'font-awesome-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
