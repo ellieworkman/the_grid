@@ -79,7 +79,8 @@ ul.circled li:before,
 .items li .text-overlay,
 .owl-carousel .item .text-overlay,
 .thumbs .thumb .text-overlay {
-	background-color: rgba(26, 187, 156, 0.9);
+	/*background-color: rgba(26, 187, 156, 0.9);*/
+	background-color: rgba(166, 166, 166, 0.9);
 }
 
 .classic-blog .post .date,
