@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
     if current_user
       render :home
     else 
-      render :landing
+      redirect_to "/users/sign_in"
     end
   end 
 

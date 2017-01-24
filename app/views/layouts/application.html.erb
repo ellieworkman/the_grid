@@ -46,6 +46,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
   
   <body>
@@ -60,7 +61,7 @@
               
               <!-- ============================================================= LOGO ============================================================= -->
               
-              <a class="navbar-brand" href="index.html"><img src="/public_assets/images/logo.svg" class="logo" alt=""></a>
+              <a class="navbar-brand" href="index.html"><class="home-logo logo" alt=""></a>
               
               <!-- ============================================================= LOGO : END ============================================================= -->
               
@@ -73,54 +74,7 @@
                   <a href="/categories" class="dropdown-toggle" data-toggle="dropdown">The Grid</a>    
                 </li><!-- /.dropdown -->               
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
-                  
-                  <ul class="dropdown-menu">
-                    <li><a href="/blogs/index">Fashion</a></li>
-                    <li><a href="/blogs/index">Beauty</a></li>
-                    <li><a href="/blogs/index">Inspiration</a></li>
-                    <li><a href="/blogs/index">Career</a></li>
-                    <li><a href="/blogs/index">Words</a></li>
-                    <li><a href="/blogs/index">Sports</a></li>
-                    <li><a href="/blogs/index">Travel</a></li>
-                    <li><a href="/blogs/index">Self Improvement</a></li>
-                    <li><a href="/blogs/index">Finance</a></li>
-                    <li><a href="/blogs/index">Aesthetic</a></li>
-                    <li><a href="/blogs/index">Bad-Ass Women</a></li>
-                  </ul><!-- /.dropdown-menu -->
-                </li><!-- /.dropdown -->
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Words</a>
-                  
-                  <ul class="dropdown-menu">
-                    <li><a href="blog.html">Success</a></li>
-                    <li><a href="blog2.html">Minimalism</a></li>
-                    <li><a href="blog3.html">Image</a></li>
-                    <li><a href="blog4.html">Purpose, Fate</a></li>
-                    <li><a href="blog5.html">Discipline</a></li>
-                    <li><a href="blog6.html">Character</a></li>
-                    <li><a href="blog7.html">Fuck It, Courage, Change</a></li>
-                    <li><a href="blog-post.html">Hope, Inspiration, Perspective</a></li>
-                    <li><a href="blog-post2.html">Time</a></li>
-                    <li><a href="blog-post2.html">Work</a></li>
-                    <li><a href="blog-post2.html">Dolla $ Billz</a></li>
-                    <li><a href="blog-post3.html">Love, Heartbreak</a></li>
-                    <li><a href="blog-post3.html">Creativity</a></li>
-                    <li><a href="blog-post3.html">California</a></li>
-                    <li><a href="blog-post3.html">Misc.</a></li>
-                  </ul><!-- /.dropdown-menu -->
-                </li><!-- /.dropdown -->
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Proust Questionaire</a>
-                  
-                  <ul class="dropdown-menu">
-    
-                    
-                    <li><a href="about.html">Index</a></li>
-                    <li><a href="about2.html">Take It!</a></li>
-                  </ul><!-- /.dropdown-menu -->
+                  <a href="/blogs" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
                 </li><!-- /.dropdown -->
                 
                 <li class="dropdown">
@@ -144,18 +98,6 @@
                       <li><a href ="/users/sign_in">Login</a></li>
                     <% end %> 
 
-                
-                <li class="dropdown pull-right searchbox">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search">Search</i></a>
-                        
-                  <div class="dropdown-menu">
-                    <form id="search" class="navbar-form search" role="search">
-                      <i class="icon-search"/>
-                      <input type="search" class="form-control" placeholder="Type to search">
-                      <button type="submit" class="btn btn-default btn-submit icon-right-open"></button>
-                    </form>
-                  </div><!-- /.dropdown-menu -->
-                </li><!-- /.searchbox -->
                 
               </ul><!-- /.nav -->
               
@@ -219,10 +161,24 @@
     <script src="/switchstylesheet/switchstylesheet.js"></script>
     
     <script>
+      var safeColors = ['00','33','66','99','cc','ff'];
+      var rand = function() {
+          return Math.floor(Math.random()*6);
+      };
+      var randomColor = function() {
+          var r = safeColors[rand()];
+          var g = safeColors[rand()];
+          var b = safeColors[rand()];
+          return "#"+r+g+b;
+      };
       $(document).ready(function(){ 
-        $(".changecolor").switchstylesheet( { seperator:"color"} );
+        //$(".changecolor").switchstylesheet( { seperator:"color"} );
+        $('#tag-grid').each(function() {
+          $(this).css('background',randomColor());
+        });
       });
     </script>
+
     <!-- For demo purposes – can be removed on production : End -->
   </body>
 </html>

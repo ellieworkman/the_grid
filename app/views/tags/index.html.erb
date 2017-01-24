@@ -12,8 +12,7 @@
           <div class="row">
             <div class="col-md-8 col-sm-9 center-block text-center">
               <header>
-                <h1>Choose the Tags for Blog Suggestions!</h1>
-                <p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes.</p>
+                <h1 class="home-font-color"> Within this category, what are you in the mood for? </h1>
               </header>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -22,39 +21,31 @@
         <div class="container inner-bottom">
           <div class="row">
             <div class="col-sm-12 portfolio">
-              
-              <ul class="filter text-center">
-                <li><a href="#" data-filter="*" class="active">All</a></li>
-                <li><a href="#" data-filter=".identity">Identity</a></li>
-                <li><a href="#" data-filter=".interactive">Interactive</a></li>
-                <li><a href="#" data-filter=".print">Print</a></li>
-                <li><a href="#" data-filter=".photography">Photography</a></li>
-              </ul><!-- /.filter -->
-              
               <ul class="isotope items col-3">
               <% @tags.each do |tag| %>
-                <li class="item thumb interactive">
+                <li class="grid item thumb interactive">
                   <a href="/blogs?tag_id=<%= tag.id %>">
                     <figure>
-                      <figcaption class="text-overlay">
-                        <div class="info">
-                          <h4><%= tag.name %></h4>
-                          <p>Interactive</p>
-                        </div><!-- /.info -->
-                      </figcaption>
-                      <img src="<%= tag.image_url %>" alt="">
+                      
+                      <div class="grid-overlay">
+                        <%= tag.name %>
+                      </div>
+                      <img class="image-responsive" src="<%= tag.image_url %>" alt="">
                     </figure>
                   </a>
                 </li><!-- /.item -->
                 <% end %>
-                
               </ul><!-- /.items -->
-              
-            </div><!-- /.col -->
+            </div><!-- /.col -->  
           </div><!-- /.row -->
         </div><!-- /.container -->
       </section>
-      
+
+      <div class="grid-container"> 
+        <% @tags.each do |mytag| %>
+          <div class="tag" id="tag-grid"><%= mytag.name %></div>
+        <%end%>
+      </div>     
       <!-- ============================================================= SECTION – PORTFOLIO : END ============================================================= -->
       
       

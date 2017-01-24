@@ -1,5 +1,10 @@
+.home-logo{
+  background-image: url("home_corner_img.png");
+}
 
-
+.grid{
+  max-height: 300px;
+}
  
 .categories-grid-overlay {
   background-color: #a6a6a6 !important;
@@ -9,12 +14,26 @@
   font-family: 'Covered By Your Grace', cursive;
 }
 
-.home-font-color{
+.home-font-color, .home-font-color a, .home-font-color figcaption{
 color: #0d1219 !important;
-  a, figcaption {
-    color: #0d1219 !important;
-  }
+}
 
+.grid-overlay{
+  background-color: rgba(255, 255, 204, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 30%;
+  color: white;
+  font-size:20px;
+  text-align: center;
+}
+
+.grid-overlay:hover{
+  background-color: rgba(166, 166, 166, 0.5);
 }
 
 .home-button-color{
