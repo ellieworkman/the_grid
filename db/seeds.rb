@@ -43,4 +43,7 @@ categories_tags = CategoriesTag.create(category_id: 2, tag_id: 19)
 categories_tags = CategoriesTag.create(category_id: 2, tag_id: 20)
 categories_tags = CategoriesTag.create(category_id: 2, tag_id: 21)
 
+blogs = Blog.create(title: 'A Pair and a Spare', description: 'Discovered for her incredible DIY skills, she makes the fashion cut for her classic, Madewell-like style and clean silhouette. Bests: Closet clean outs, Style breakdowns, City breakdowns', image_url: 'https://farm8.staticflickr.com/7483/16249635126_5af56e1233_b.jpg', url: 'http://apairandasparediy.com/', category_id: 1)
+
+
 
