@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get "/", to: "categories#home"
+  get "/", to: "categories#index"
+  get "/about", to: "categories#about"
 
   post "/favorites", to: "favorites#create"
   get "/favorites", to: "favorites#index"
