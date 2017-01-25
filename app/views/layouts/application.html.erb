@@ -57,19 +57,18 @@
       <div class="navbar">
         <div class="yamm">
           <div class="navbar-collapse collapse">
-            <div class="container">
+            <div class="container nav-div-style home-logo">
               
               <!-- ============================================================= LOGO ============================================================= -->
               
-              <a class="navbar-brand" href="index.html"><class="home-logo logo" alt=""></a>
+              <a class="navbar-brand" href="index.html"><class="logo" alt=""></a>
               
               <!-- ============================================================= LOGO : END ============================================================= -->
               
               
               <!-- ============================================================= MAIN NAVIGATION ============================================================= -->
               
-              <ul class="home-font-color nav navbar-nav">
-                
+              <ul class="home-font-color nav navbar-nav nav-bar-style">
                 <li class="dropdown">
                   <a href="/categories" class="dropdown-toggle" data-toggle="dropdown">The Grid</a>    
                 </li><!-- /.dropdown -->               
@@ -86,6 +85,7 @@
                     <li><a href="modal.html">Contact</a></li>  
                   </ul><!-- /.dropdown-menu -->
                 </li><!-- /.dropdown -->
+
                 
                 <!-- ============================================================= MEGA MENU ============================================================= -->
                 <!-- enter megamenu here when ready  -->
@@ -160,7 +160,7 @@
     
     <script src="/switchstylesheet/switchstylesheet.js"></script>
     
-    <script>
+    <!-- <script>
       var safeColors = ['00','33','66','99','cc','ff'];
       var rand = function() {
           return Math.floor(Math.random()*6);
@@ -177,8 +177,20 @@
           $(this).css('background',randomColor());
         });
       });
+    </script> -->
+
+    <script>
+      $(document).ready(function(){ 
+        $(".changecolor").switchstylesheet( { seperator:"color"} );
+      });
     </script>
 
     <!-- For demo purposes – can be removed on production : End -->
+    <script type="text/javascript">
+      $(function() {
+        var newWidth = $(".nav-div-style").outerWidth()*.53;
+        $(".nav-bar-style").css('width', newWidth);
+      })
+    </script>
   </body>
 </html>

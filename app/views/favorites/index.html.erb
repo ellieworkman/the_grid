@@ -1,4 +1,8 @@
-
+    <!-- ============================================================= MAIN ============================================================= -->
+    
+<main>
+      
+      <!-- ============================================================= SECTION – PORTFOLIO ============================================================= -->
 
 <section id="portfolio">
         
@@ -6,8 +10,9 @@
           <div class="row">
             <div class="col-md-8 col-sm-9 center-block text-center">
               <header>
-                <h1>3 Columns grid portfolio</h1>
-                <p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes.</p>
+                <h1 class="home-font-color">My Favorites</h1>
+                <p class="home-font-color">“Genius is not replicable. Inspiration, though, is contagious, and multiform- and even just to see, close up, power and aggression made vulnerable to beauty is to feel inspired and (in a fleeting, mortal way) reconciled.” David Foster Wallace
+                </p>
               </header>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -18,24 +23,21 @@
             <div class="col-sm-12 portfolio">
               
               <ul class="filter text-center">
-                <li><a href="#" data-filter="*" class="active">All</a></li>
-                <li><a href="#" data-filter=".identity">Identity</a></li>
-                <li><a href="#" data-filter=".interactive">Interactive</a></li>
-                <li><a href="#" data-filter=".print">Print</a></li>
-                <li><a href="#" data-filter=".photography">Photography</a></li>
+                <li><a href="#" data-filter="*" class="Fashion">All</a></li>
+                <li><a href="#" data-filter=".fashion">Fashion</a></li>
+                <li><a href="#" data-filter=".beauty">Beauty</a></li>
+                <li><a href="#" data-filter=".inspiration">Inspiration</a></li>
               </ul><!-- /.filter -->
               
               <ul class="isotope items col-3">
                 <% @favorites.each do |favorite| %>
-                  <li class="item thumb interactive">
+                  <li class="item thumb <%= favorite.blog.category.name.downcase %>">
                     <a href="<%= favorite.blog.url %>">
                       <figure>
                         <figcaption class="text-overlay">
                           <div class="info">
                             <h4><%= favorite.blog.title %></h4>
                             <p><%= favorite.blog.description %></p>
-                                
-                          
                           </div><!-- /.info -->
                         </figcaption>
                         
@@ -45,10 +47,13 @@
                   </li><!-- /.item -->
                 <% end %>
                 
+
+
               </ul><!-- /.items -->
               
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container -->
       </section>
+    </main>
 
